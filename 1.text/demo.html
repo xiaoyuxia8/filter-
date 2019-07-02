@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 1.filter(function(参数一,参数二,参数三)callback)
+    var arr = [1,2,3,4,5]
+    // 参数一是元素,参数二是下标,参数三是返回的数组,回调函数是查询条件
+    var arr1 = arr.filter(function (v,i,arr) { 
+        return v>3  //这里面是个回调函数,回调函数里的返回的是筛选的条件
+     })
+     console.log(arr1); // 4 5
+    var arr2 = arr.filter(function (v,i,arr) { 
+        return true  //这里面是个回调函数,回调函数里的返回的是筛选的条件
+     })
+     console.log(arr2); // [1,2,3,4,5]
+
+    var arr3 = arr.filter(function (v,i,arr) { 
+         //这里面是个回调函数,回调函数里的返回的是筛选的条件
+        return i>2     //索引号大于2的条件
+     })
+     console.log(arr3); // [4,5]
+
+
+     
+    </script>
+</body>
+</html>
